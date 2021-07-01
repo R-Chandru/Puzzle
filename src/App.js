@@ -3,7 +3,7 @@ import Board from "./Board";
 import { updateURLParameter } from "./helpers"
 
 function App() {
-  const [imgUrl, setImgUrl] = useState("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/1%261_logo.svg/1200px-1%261_logo.svg.png")
+  const [imgUrl, setImgUrl] = useState("")
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
