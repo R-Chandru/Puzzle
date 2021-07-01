@@ -37,3 +37,8 @@ h1 {
 button {
   display: block;
 }
+
+.image {
+  width: 150px;
+  height: 150px;
+}

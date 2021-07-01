@@ -3,7 +3,7 @@ import Board from "./Board";
 import { updateURLParameter } from "./helpers"
 
 function App() {
-  const [imgUrl, setImgUrl] = useState("")
+  const [imgUrl, setImgUrl] = useState("https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3")
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
@@ -20,6 +20,10 @@ function App() {
   return (
     <div className="App">
       <h1>React sliding puzzle</h1>
+      <img className="image"
+        src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3"
+        alt="new"
+      />
       <Board imgUrl={imgUrl} />
       <input value={imgUrl} onChange={handleImageChange} />
     </div>
