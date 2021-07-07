@@ -9,7 +9,9 @@ function App() {
   const changeIsstart = () => {
     setIsStarted(true);
   };
-
+ const setTimeFalse=()=>{
+   setSetTime(false);
+ };
   const changerTimer = () => {
     console.log("again come in here herehere here here");
     setValue1(0);
@@ -129,13 +131,14 @@ function App() {
         imgUrl={imgUrl[index].img}
         resetTime={resetTime}
         changerTimer={changerTimer}
-        resetTime={resetTime}
+        
         isStarted={isStarted}
         changeIsstart={changeIsstart}
         value1={value1}
         value2={value2}
         value3={value3}
         value4={value4}
+        setTimeFalse={setTimeFalse}
       />
       <button type="button" id="buttonAll" onClick={changeIndexVal}>
         Change Image

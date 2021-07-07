@@ -14,6 +14,7 @@ function Board({
   value2,
   value3,
   value4,
+  setTimeFalse,
 }) {
   const [tiles, setTiles] = useState([...Array(TILE_COUNT).keys()]);
   const [completedTime1, setCompletedTime1] = useState(0);
@@ -61,14 +62,23 @@ function Board({
     height: BOARD_SIZE,
   };
   var hasWon = isSolved(tiles);
-  if (hasWon && isStarted) {
+  
+  /*
+  if (hasWon ) {
+    console.log("succes");
+    
     setCompletedTime1(value1);
     setCompletedTime2(value2);
     setCompletedTime3(value3);
     setCompletedTime4(value4);
-    setDisplayCross(true);
-    resetTime();
+    var v1=value1;
+    var v2=value2;
+    var v3=value3;
+    var v4=value4;
+    //setDisplayCross(true);
+   // resetTime();
   }
+  */
   return (
     <>
       <ul style={style} className="board">
@@ -85,17 +95,19 @@ function Board({
         ))}
       </ul>
       {hasWon && isStarted && displayCross && (
+
         <div className="finished">
+          {setTimeFalse()}
           <FaWindowClose
             id="icon-close"
-            onClick={() => setDisplayCross(false)}
+            onClick={() => {setDisplayCross(false)}}
           />
           <h2>Successfully Completed</h2>
           <h4>Total Time Taken</h4>
           <h4>
-            {completedTime4}
-            {completedTime3}:{completedTime2}
-            {completedTime1}
+            {value4}
+            {value3}:{value2}
+            {value1}
           </h4>
         </div>
       )}
