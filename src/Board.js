@@ -84,7 +84,7 @@ function Board({
           />
         ))}
       </ul>
-      {!hasWon && isStarted && displayCross && (
+      {hasWon && isStarted && displayCross && (
         <div className="finished">
           <FaWindowClose
             id="icon-close"
