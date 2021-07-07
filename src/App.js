@@ -5,7 +5,6 @@ import { updateURLParameter } from "./helpers";
 
 function App() {
   const [setTime, setSetTime] = useState(false);
-
   const [isStarted, setIsStarted] = useState(false);
   const changeIsstart = () => {
     setIsStarted(true);
@@ -105,14 +104,14 @@ function App() {
     resetTime();
   };
 
-  const handleImageChange = (e) => {
-    setImgUrl(e.target.value);
-    window.history.replaceState(
-      "",
-      "",
-      updateURLParameter(window.location.href, "img", e.target.value)
-    );
-  };
+  // const handleImageChange = (e) => {
+  //   setImgUrl(e.target.value);
+  //   window.history.replaceState(
+  //     "",
+  //     "",
+  //     updateURLParameter(window.location.href, "img", e.target.value)
+  //   );
+  // };
   console.log(imgUrl);
   console.log(imgUrl[0]);
   return (
@@ -126,7 +125,6 @@ function App() {
         {value3}:{value2}
         {value1}
       </h5>
-
       <Board
         imgUrl={imgUrl[index].img}
         resetTime={resetTime}
