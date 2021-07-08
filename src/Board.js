@@ -81,6 +81,23 @@ function Board({
   */
   return (
     <>
+      {hasWon && isStarted && displayCross && (
+
+        <div className="finished">
+          {setTimeFalse()}
+          
+          <h style={{ color:'#333', fontSize:50, paddingTop:30, marginTop:10 }}>Awesome!</h>
+          <h4>You just completed in {'\n'}
+
+            {value4}
+            {value3}:{value2}
+            {value1}
+
+            {'\n'}🥳
+          </h4>
+        </div>
+      )}
+
       <ul style={style} className="board">
         {tiles.map((tile, index) => (
           <Tile
@@ -94,30 +111,15 @@ function Board({
           />
         ))}
       </ul>
-      {hasWon && isStarted && displayCross && (
 
-        <div className="finished">
-          {setTimeFalse()}
-          <FaWindowClose
-            id="icon-close"
-            onClick={() => {setDisplayCross(false)}}
-          />
-          <h2>Successfully Completed</h2>
-          <h4>Total Time Taken</h4>
-          <h4>
-            {value4}
-            {value3}:{value2}
-            {value1}
-          </h4>
-        </div>
-      )}
+      
       {!isStarted ? (
         <button id="startBut" onClick={() => handleStartClick()}>
-          Start game
+          START
         </button>
       ) : (
         <button id="startBut" onClick={() => handleShuffleClick()}>
-          Restart game
+          RESTART
         </button>
       )}
     </>

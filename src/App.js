@@ -89,16 +89,10 @@ function App() {
     }
   });
 
-  // useEffect(() => {
-  //   const urlParams = new URLSearchParams(window.location.search);
-  //   if (urlParams.has("img")) {
-  //     setImgUrl(urlParams.get("img"));
-  //   }
-  // }, []);
 
   const changeIndexVal = () => {
     var indexNow = index + 1;
-    if (indexNow > 2) {
+    if (indexNow > 3) {
       indexNow = 0;
     }
     setIndex(indexNow);
@@ -118,20 +112,14 @@ function App() {
   console.log(imgUrl[0]);
   return (
     <div className="App">
-      <h1 id="h11">React sliding puzzle</h1>
-      <h3 id="h31">Real Image</h3>
-      <img id="appImage" src={imgUrl[index].img} alt="image1" />
-      <h4 id="h4">Timer</h4>
-      <h5 className="container-time">
-        {value4}
-        {value3}:{value2}
-        {value1}
-      </h5>
+      <h1 id="h11">Sli-zle</h1>
+      <div style={{ paddingLeft:32, paddingTop:20}}>
+        <img id="appImage" src={imgUrl[index].img} alt="image1" />
+      </div>
       <Board
         imgUrl={imgUrl[index].img}
         resetTime={resetTime}
         changerTimer={changerTimer}
-        
         isStarted={isStarted}
         changeIsstart={changeIsstart}
         value1={value1}
@@ -140,8 +128,14 @@ function App() {
         value4={value4}
         setTimeFalse={setTimeFalse}
       />
+      <h5 className="container-time">
+        {value4}
+        {value3}:{value2}
+        {value1}
+      </h5>
+
       <button type="button" id="buttonAll" onClick={changeIndexVal}>
-        Change Image
+        SWAP
       </button>
     </div>
   );

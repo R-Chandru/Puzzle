@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Hanalei Fill', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  background-color: LightGray;
+  font-weight: bold;
+  background-color: #000;
   color: white;
+  margin-bottom: 350px;
 }
 
 code {
@@ -40,9 +40,10 @@ button {
 }
 
 #appImage {
+  margin-top: -15px;
   height: 200px;
   width: 200px;
-  border: 10px solid rgb(12, 12, 12);
+  margin-bottom: -20px;
 }
 #h31 {
   margin-top: 5px;
@@ -56,53 +57,59 @@ button {
   padding: 10px 15px;
 }
 #buttonAll {
-  padding: 15px 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: rgb(55, 185, 55);
+  font-family: 'Hanalei Fill', cursive;
+  padding: 5px 10px;
+  margin-top: 0px;
+  padding-bottom: 50;
+  background-color: #000;
   border-radius: 10px;
-  border: none;
+  border:2px solid #999;
   outline: none;
   color: white;
-  font-size: 1.4em;
+  font-size: 1.2em;
+  width: 140px;
 }
 #startBut {
-  padding: 15px 10px;
-  margin-top: 10px;
+  font-family: 'Hanalei Fill', cursive;
+  padding: 5px 10px;
+  margin-top: 75px;
   margin-bottom: 10px;
-  background-color: rgb(243, 50, 50);
+  background-color: #000;
   border-radius: 10px;
-  border: none;
-  outline: none;
+  width: 140px;
+  border:2px solid #999;
+  padding-top: 5px 5px;
   color: white;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 .container-time {
-  margin-top: -25px;
+  margin-top: -145px;
   font-size: 1.6em;
   color: rgb(12, 12, 12);
   width: auto;
-  padding: 10px 15px;
+  padding: 3px 10px;
   background-color: rgb(247, 241, 241);
   border-radius: 7px;
 }
 #h4 {
-  font-size: 1.3em;
+  margin-top: -30px;
+  font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 10px;
   color: black;
   font-weight: 500;
 }
 .finished {
-  position: absolute;
-  background-color: white;
-  color: black;
-  z-index: 10;
-  padding: 70px;
-  top: 65%;
-  left: 30%;
+  margin-top: -200px;
+  background-color: #777;
+  color: #fff;
+  width: auto;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: 1.4em;
   transition: all 0.5s;
+  border-radius: 10px;
 }
 #icon-close {
   font-size: 1.5em;
@@ -111,14 +118,14 @@ button {
   top: 5px;
 }
 #h11 {
-  font-weight: 100;
+  font-weight: bold;
   text-transform: uppercase;
   margin-top: 5px;
   letter-spacing: 4px;
-  background-color: black;
   width: auto;
   padding: 10px 15px;
   border-radius: 6px;
+  font-size: 70px;
 }
 @media only screen and (max-width: 780px) {
   .finished {

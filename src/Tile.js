@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Motion, spring } from "react-motion";
 import { getMatrixPosition, getVisualPosition } from "./helpers";
